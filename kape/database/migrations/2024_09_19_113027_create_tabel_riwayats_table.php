@@ -13,10 +13,16 @@ return new class extends Migration
     {
         Schema::create('tabel_riwayats', function (Blueprint $table) {
             $table->id();
-            $table->CHAR('servis_id ',7);  
-            $table->foreignId('tgl')->constrained();
-            $table->timestamps('status')->constrained();
-            $table->timestamps('user_id')->constrained();
+            $table->unsignedBigInteger('service_id');
+            $table->foreign('service_id')->references('id')->on('tabel_services'); 
+            $table->date('tgl_riwayat');
+            $table->unsignedBigInteger('user_id');
+ 
+    $table->foreign('user_id')->references('id')->on('users');
+    $table->unsignedBigInteger('status_id');
+ 
+    $table->foreign('status_id')->references('id')->on('tabel_statuses');
+            $table->timestamps();
         });
     }
 

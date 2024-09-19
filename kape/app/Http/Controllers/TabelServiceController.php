@@ -2,21 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ruang;
+use App\Models\tabel_service;
 use Illuminate\Http\Request;
 
-class RuangController extends Controller
+class TabelServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //panggil model Ruang
-        $hasil = Ruang::all();
-        // cek isi variabel $hasil
-        dd($hasil);
-        
+        //
     }
 
     /**
@@ -38,7 +34,7 @@ class RuangController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Ruang $ruang)
+    public function show(tabel_service $tabel_service)
     {
         //
     }
@@ -46,7 +42,7 @@ class RuangController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Ruang $ruang)
+    public function edit(tabel_service $tabel_service)
     {
         //
     }
@@ -54,7 +50,7 @@ class RuangController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Ruang $ruang)
+    public function update(Request $request, tabel_service $tabel_service)
     {
         //
     }
@@ -62,7 +58,7 @@ class RuangController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Ruang $ruang)
+    public function destroy(tabel_service $tabel_service)
     {
         //
     }

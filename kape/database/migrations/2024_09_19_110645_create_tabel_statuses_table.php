@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('admins', function (Blueprint $table) {
+        Schema::create('tabel_statuses', function (Blueprint $table) {
             $table->id();
-             $table->CHAR('konfirmasi user ',7);  
-            $table->foreignId('palidasi')->constrained();
-           $table->timestamps();
+             $table->char('status');
         });
     }
 
@@ -24,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('admins');
+        Schema::dropIfExists('tabel_statuses');
     }
 };
