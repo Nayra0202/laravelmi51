@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Ruang extends Model
 {
     use HasFactory;
+    public function 
+    return ->belongsTo(  ::final class Ruang extends AnotherClass implements Interface
+    {
+        
+    }
+    )
 }

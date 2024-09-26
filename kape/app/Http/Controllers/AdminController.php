@@ -12,7 +12,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        //panggil model ststus
+        $hasil=admin::all();
+        //cek isi variabel $hasil
+        //dd($hasil);
+        return view(view: 'admin.index')->with(key: 'hasil',value:$hasil);
     }
 
     /**

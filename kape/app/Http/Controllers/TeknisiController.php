@@ -12,7 +12,11 @@ class TeknisiController extends Controller
      */
     public function index()
     {
-        //
+        //panggil model ststus
+        $hasil=teknisi::all();
+        //cek isi variabel $hasil
+        //dd($hasil);
+        return view(view: 'teknisi.index')->with(key: 'hasil',value:$hasil);
     }
 
     /**
@@ -44,7 +48,11 @@ class TeknisiController extends Controller
      */
     public function edit(teknisi $teknisi)
     {
-        //
+        //panggil model Riwayat
+        $hasil=teknisi::all();
+        //cek isi variable $hasil
+        //dd($hasil);
+        return view(view: 'teknisi.index')->with(key: 'hasil',value:$hasil);
     }
 
     /**

@@ -17,11 +17,9 @@ return new class extends Migration
             $table->foreign('service_id')->references('id')->on('tabel_services'); 
             $table->date('tgl_riwayat');
             $table->unsignedBigInteger('user_id');
- 
-    $table->foreign('user_id')->references('id')->on('users');
-    $table->unsignedBigInteger('status_id');
- 
-    $table->foreign('status_id')->references('id')->on('tabel_statuses');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('status_id');
+            $table->foreign('status_id')->references('id')->on('tabel_statuses');
             $table->timestamps();
         });
     }

@@ -12,7 +12,11 @@ class TabelServiceController extends Controller
      */
     public function index()
     {
-        //
+        //panggil model ststus
+        $hasil=tabel_service::all();
+        //cek isi variabel $hasil
+        //dd($hasil);
+        return view(view: 'tabel_service.index')->with(key: 'hasil',value:$hasil);
     }
 
     /**

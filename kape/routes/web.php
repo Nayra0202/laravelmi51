@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RuangController;
+use App\Http\Controllers\TabelStatusController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,4 +20,5 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('/ruang', RuangController::class);
+route::resource('/status', TabelStatusController::class);
 require __DIR__.'/auth.php';

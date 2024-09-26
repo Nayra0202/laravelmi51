@@ -12,7 +12,11 @@ class TabelRiwayatController extends Controller
      */
     public function index()
     {
-        //
+        //panggil model ststus
+        $hasil=tabel_riwayat::all();
+        //cek isi variabel $hasil
+        //dd($hasil);
+        return view(view: 'tabel_riwayat.index')->with(key: 'hasil',value:$hasil);
     }
 
     /**
@@ -20,7 +24,11 @@ class TabelRiwayatController extends Controller
      */
     public function create()
     {
-        //
+        //panggil model Riwayat
+        $hasil=tabel_Riwayat::all();
+        //cek isi variable $hasil
+        //dd($hasil);
+        return view(view: 'tabel_Riwayat.index')->with(key: 'hasil',value:$hasil);
     }
 
     /**

@@ -12,7 +12,11 @@ class TabelStatusController extends Controller
      */
     public function index()
     {
-        //
+        //panggil model ststus
+        $hasil=tabel_status::all();
+        //cek isi variabel $hasil
+        //dd($hasil);
+        return view(view: 'status.index')->with(key: 'hasil',value:$hasil);
     }
 
     /**
